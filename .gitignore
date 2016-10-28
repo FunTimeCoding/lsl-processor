@@ -1,0 +1,9 @@
+*.pyc
+*.egg-info
+.pyvenv
+.tox
+build
+
+# pytest
+.coverage
+.cache
