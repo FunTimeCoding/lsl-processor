@@ -4,3 +4,4 @@ flake8 # style check
 pyenchant # pylint spellcheck plugin
 pytest # test framework
 pytest-cov # pytest coverage plugin
+pypeg2 # expression grammar parser
