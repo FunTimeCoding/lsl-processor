@@ -1,61 +1,77 @@
 # LslProcessor
 
-## Usage
-
-This section explains how to use this project.
-
-Run the main entry point program.
-
-```sh
-PYTHONPATH=. bin/lp
-```
-
-
 ## Setup
 
-This section explains how to install and uninstall this project.
+This section explains how to install and uninstall the project.
 
-Install the project.
+Install pip package from GitHub.
 
 ```sh
 pip3 install git+https://git@github.com/FunTimeCoding/lsl-processor.git#egg=lsl-processor
 ```
 
-Uninstall the project.
+Install pip package from DevPi.
+
+```sh
+pip3 install -i https://testpypi.python.org/pypi lsl-processor
+```
+
+Uninstall package.
 
 ```sh
 pip3 uninstall lsl-processor
 ```
 
 
+## Usage
+
+This section explains how to use the project.
+
+Run program.
+
+```sh
+lp
+```
+
+
 ## Development
 
-This section explains commands to help the development of this project.
+This section explains how to improve the project.
 
-Install the project from a local clone.
-
-```sh
-./development-setup.sh
-```
-
-Run tests, style check and metrics.
+Configure Git on Windows before cloning. This avoids problems with Vagrant and VirtualBox.
 
 ```sh
-./run-tests.sh
-./run-style-check.sh
-./run-metrics.sh
+git config --global core.autocrlf input
 ```
 
-Build the project.
+Build project. This installs dependencies.
 
 ```sh
-./build.sh
+script/build.sh
 ```
 
+Run tests, check style and measure metrics.
 
-## Skeleton
+```sh
+script/test.sh
+script/check.sh
+script/measure.sh
+```
 
-This section explains details of the project skeleton.
+Build package.
 
-- The `tests` directory is not called `test` because there is a package with that name.
-- Dashes in project names become underscores in Python.
+```sh
+script/package.sh
+```
+
+Install Debian package.
+
+```sh
+sudo dpkg --install build/python3-lsl-processor_0.1.0-1_all.deb
+```
+
+Show files the package installed.
+
+```sh
+dpkg-query --listfiles python3-lsl-processor
+```

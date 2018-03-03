@@ -1,3 +1,5 @@
+from sys import argv as argument_vector, exit as system_exit
+
 from pypeg2 import Keyword, Enum, attr, K, blank, name, Namespace, word, endl
 from pypeg2 import optional, maybe_some, indent, csl, List
 
@@ -54,6 +56,12 @@ class Script():
 class LslProcessor:
     def __init__(self, arguments: list) -> None:
         pass
+
+    @staticmethod
+    def main():
+        application = LslProcessor(argument_vector[1:])
+        exit_code = application.run()
+        system_exit(exit_code)
 
     @staticmethod
     def run() -> int:
