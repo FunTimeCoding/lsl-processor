@@ -5,6 +5,7 @@ tmp
 # Python
 .coverage
 .cache
+.pytest_cache
 .venv
 .tox
 *.egg-info
