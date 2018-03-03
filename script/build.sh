@@ -24,6 +24,7 @@ script/test.sh --ci-mode
 ./setup.py bdist_wheel --dist-dir build
 SYSTEM=$(uname)
 
-if [ "${SYSTEM}" = Linux ]; then
-    script/package.sh
-fi
+# TODO: pypeg2 is not available as a Debian package.
+#if [ "${SYSTEM}" = Linux ]; then
+#    script/package.sh
+#fi
