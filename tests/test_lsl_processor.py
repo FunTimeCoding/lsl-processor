@@ -48,8 +48,10 @@ def test_state_with_an_event_with_multiple_instructions() -> None:
     print(things)
 
 
-def test_a_function_and_state_with_an_event_with_multiple_instructions() -> None:
-    text = 'int f(int a, long b) { do_this; do_that; } default{ state_entry(){ do_this; do_that; } }'
+def test_a_function_and_state_with_an_event_with_multiple_instructions() \
+        -> None:
+    text = 'int f(int a, long b) { do_this; do_that; }' \
+           ' default{ state_entry(){ do_this; do_that; } }'
     things = parse(text, States, comment=comment_c)
     print(things)
 

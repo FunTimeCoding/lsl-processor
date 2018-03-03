@@ -30,7 +30,9 @@ block = '{', endl, maybe_some(indent(Instruction)), '}', endl
 
 
 class Function(List):
-    grammar = attr('typing', Type), blank, name(), '(', Parameters, ')', endl, block
+    grammar = attr(
+        'typing', Type
+    ), blank, name(), '(', Parameters, ')', endl, block
 
 
 class Event(List):
